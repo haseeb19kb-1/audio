@@ -1,0 +1,24 @@
+{
+  "name": "zevo-live",
+  "version": "1.0.0",
+  "description": "ZEVO LIVE - International Audio-Live Streaming Platform inspired by BIGO Live",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test supabase/tests/rls_security.test.mjs packages/validation/tests/validation.test.mjs",
+    "test:security": "node --test supabase/tests/rls_security.test.mjs",
+    "mobile:start": "npm run start --workspace=@zevo/mobile",
+    "mobile:android": "npm run android --workspace=@zevo/mobile",
+    "mobile:ios": "npm run ios --workspace=@zevo/mobile",
+    "mobile:web": "npm run web --workspace=@zevo/mobile",
+    "admin:dev": "npm run dev --workspace=@zevo/admin",
+    "admin:build": "npm run build --workspace=@zevo/admin",
+    "admin:start": "npm run start --workspace=@zevo/admin"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

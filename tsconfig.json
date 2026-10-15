@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "baseUrl": ".",
+    "paths": {
+      "@zevo/shared-types": ["packages/shared-types/src/index.ts"],
+      "@zevo/shared-types/*": ["packages/shared-types/src/*"],
+      "@zevo/validation": ["packages/validation/src/index.ts"],
+      "@zevo/validation/*": ["packages/validation/src/*"],
+      "@zevo/config": ["packages/config/src/index.ts"],
+      "@zevo/config/*": ["packages/config/src/*"],
+      "@/*": ["apps/mobile/src/*"]
+    }
+  },
+  "include": [
+    "packages/*/src/**/*",
+    "apps/mobile/src/**/*",
+    "apps/mobile/App.tsx",
+    "apps/admin/src/**/*"
+  ],
+  "exclude": ["node_modules", "dist", ".next", "supabase"]
+}
